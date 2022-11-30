@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Table</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <!-- Header -->
+    <h1>My Top 5 Friends</h1>
+        <table>
+          <tr>
+            <th class="NIM">NIM</th>
+            <th class="Nama">Nama</th>
+            <th class="Alamat">Alamat</th>
+            <th class= "Action">Action</th>
+          </tr>
+
+          <tr>
+            <td class="text">41215509</td>
+            <td class="text">Annisa Saninah</td>
+            <td class="text">Kota Cirebon</td>
+             <td class="text" class="Hapus">Delete</td>
+          </tr>
+
+          <tr>
+            <td class="text">41215605</td>
+            <td class="text">Siti Wastopa Riandona</td>
+            <td class="text">Kabupaten Garut</td>
+            <td class="text" class="Hapus">Delete</td>
+          </tr>
+
+          <tr>
+            <td class="text">41215363</td>
+            <td class="text">Aulia Agustina Sri Maharani</td>
+            <td class="text">Kabupaten Kuningan</td>
+            <td class="text" class="Hapus">Delete</td>
+          </tr>
+
+          <tr>
+            <td class="text">41215400</td>
+            <td class="text">Khusnul Khotimah</td>
+            <td class="text">Kabupaten Cirebon</td>
+            <td class="text" class="Hapus">Delete</td>
+          </tr>
+
+          <tr>
+            <td class="text">41215366</td>
+            <td class="text">Bagus Hermawan</td>
+            <td class="text">Kota Cirebon</td>
+            <td class="Hapus">Delete</td>
+          </tr>
+        </table>
+        
+          <div class="tombol-kembali">
+              <a onclick="alert('Kamu mau kembali?')" href="https://annisa03.github.io/tugas3_pwd/"
+                >Sebelumnya</a>
+            </div>
+        
+            <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        
+            <script>
+              $(document).ready(function(){ $('.text').click(function(){ 
+               let text = $(this).text();
+               alert(`Anda mengklik text yang berisi text "${text}"`);
+                if(text!='Delete'){ 
+     
+                 let text2 = prompt('Mau diubah?:', text);
+                 if(!text2) return; $(this).text(text2); }
+                 else{ let yakin = confirm('Yakin?'); if(!yakin) return;  } }) }) 
+             </script>
+</body>
+</html>

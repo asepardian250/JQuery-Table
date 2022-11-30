@@ -1,0 +1,42 @@
+* {
+    body {
+        background-color: crimson;
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+.tabel {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid crimson;
+    color: black;
+    text-align: center;
+    padding: 8px;
+    width: 10px;
+}
+
+td:hover {
+    background-color: crimson;
+}
+
+th:hover {
+    background-color: crimson;
+}
+
+.text:hover {
+    background-color: crimson;
+    letter-spacing: 1px;
+    color: black;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+ }
